@@ -1,0 +1,144 @@
+#!/system/bin/sh
+# by NotZeetaa
+
+# Log path
+LOG_FILE="/data/data/com.zeetaa.zeetaatweaks/files/log/main_log"
+
+if [ -e $LOG_FILE ]; then
+  rm -rf $LOG_FILE
+fi
+
+sendToLog() {
+  timeZone=$(getprop persist.sys.timezone)
+  printDate=$(TZ="$timeZone" date +"%H:%M:%S:%3N %d-%m-%Y")
+
+  echo "[$printDate] $1" >>"$LOG_FILE"
+}
+
+write() {
+  #chmod 0644 "$1"
+  echo "$2" >"$1"
+
+  currentValue=$(cat "$1")
+
+  if [ "$currentValue" -eq "$2" ]; then
+    sendToLog "$2 -✅-> $1"
+  else
+    sendToLog "$2 -❌-> $1"
+  fi
+
+  unset currentValue
+}
+
+
+write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu1/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu3/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu5/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us "5000"
+write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us "5000"
+
+write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu0/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu1/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu1/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu2/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu2/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu3/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu3/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu5/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu5/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu6/cpufreq/interactive/fast_ramp_down "1"
+write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us "0"
+write /sys/devices/system/cpu/cpu7/cpufreq/interactive/fast_ramp_down "1"
+
+# Better Battery Efficient
+write /sys/module/workqueue/parameters/power_efficient "N"
+
+# Adreno Idler
+write /sys/module/adreno_idler/paremeters/adreno_idler_active "N"
+
+# Cpu Input Boost
+write /sys/module/cpu_input_boost/parameters/input_boost_duration "1"
+write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost_duration "1"
+write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost "100"
+
+# Gpu Tweaks
+write /sys/class/kgsl/kgsl-3d0/throttling "0"
+write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "0"
+write /sys/class/kgsl/kgsl-3d0/force_clk_on "1"
+write /sys/class/kgsl/kgsl-3d0/force_bus_on "1"
+write /sys/class/kgsl/kgsl-3d0/force_rail_on "1"
+write /sys/class/kgsl/kgsl-3d0/force_no_nap "0"
+
+# Scheduler
+write /sys/block/sda/queue/scheduler "cfq"
+write /sys/block/sdb/queue/scheduler "cfq"
+write /sys/block/sdc/queue/scheduler "cfq"
+write /sys/block/sdd/queue/scheduler "cfq"
+write /sys/block/sde/queue/scheduler "cfq"
+write /sys/block/sdf/queue/scheduler "cfq"
+write /sys/block/sda/queue/rq_affinity "2"
+write /sys/block/sda/queue/iostats "0"
+write /sys/block/sda/queue/read_ahead_kb "128"
+write /sys/block/sda/queue/add_random "0"
+write /sys/block/sdb/queue/rq_affinity "2"
+write /sys/block/sdb/queue/iostats "0"
+write /sys/block/sdb/queue/read_ahead_kb "128"
+write /sys/block/sdb/queue/add_random "0"
+write /sys/block/sdc/queue/rq_affinity "2"
+write /sys/block/sdc/queue/iostats "0"
+write /sys/block/sdc/queue/read_ahead_kb "128"
+write /sys/block/sdc/queue/add_random "0"
+write /sys/block/sdd/queue/rq_affinity "2"
+write /sys/block/sdd/queue/iostats "0"
+write /sys/block/sdd/queue/read_ahead_kb "128"
+write /sys/block/sdd/queue/add_random "0"
+write /sys/block/sde/queue/rq_affinity "2"
+write /sys/block/sde/queue/iostats "0"
+write /sys/block/sde/queue/read_ahead_kb "128"
+write /sys/block/sde/queue/add_random "0"
+write /sys/block/sdf/queue/rq_affinity "2"
+write /sys/block/sdf/queue/iostats "0"
+write /sys/block/sdf/queue/read_ahead_kb "128"
+write /sys/block/sdf/queue/add_random "0"
+write /sys/block/mmcblk0/queue/read_ahead_kb "128"
+write /sys/block/mmcblk0/queue/iostats "0"
+write /sys/block/mmcblk0/queue/add_random "0"
+write /sys/block/mmcblk0/queue/rq_affinity "2"
+write /sys/block/mmcblk1/queue/read_ahead_kb "128"
+write /sys/block/mmcblk1/queue/iostats "0"
+write /sys/block/mmcblk1/queue/add_random "0"
+write /sys/block/mmcblk1/queue/rq_affinity "2"
+
+# Dev Stune Boost
+# Fast Sensivity in Game
+write /dev/stune/background/schedtune.boost "1"
+write /dev/stune/foreground/schedtune.boost "1"
+write /dev/stune/rt/schedtune.boost "1"
+write /dev/stune/top-app/schedtune.boost "1"
+write /dev/stune/schedtune.boost "1"
+
+# Fs
+write /proc/sys/fs/dir-notify-enable "0"
+write /proc/sys/fs/lease-break-time "5"
+write /proc/sys/fs/aio-max-nr "131072"
+write /proc/sys/kernel/sched_migration_cost_ns "1000000"
+write /proc/sys/kernel/perf_cpu_time_max_percent "5"
+write /proc/sys/kernel/sched_min_task_util_for_colocation "0"
+
+# Entropy config
+write /proc/sys/kernel/random/read_wakeup_threshold "64"
+write /proc/sys/kernel/random/write_wakeup_threshold "64"
+
+
+# Scheduler features
+write /sys/kernel/debug/sched_features "NEXT_BUDDY"
+write /sys/kernel/debug/sched_features "NO_TTWUQUEUE"
+write /sys/kernel/debug/sched_features "NO_WAKEUP_PREEMPTION"
+write /sys/kernel/debug/sched_features "NO_GENTLE_FAIR_SLEEPERS"
