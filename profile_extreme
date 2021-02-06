@@ -131,7 +131,8 @@ write /proc/sys/fs/aio-max-nr "131072"
 write /proc/sys/kernel/sched_migration_cost_ns "1000000"
 write /proc/sys/kernel/perf_cpu_time_max_percent "5"
 write /proc/sys/kernel/sched_min_task_util_for_colocation "0"
-write /proc/sys/vm/min_free_kbytes "180200" 
+write /proc/sys/kernel/sched_min_granularity_ns "10000000"
+write /proc/sys/vm/min_free_kbytes "180200"
 
 # Entropy config
 write /proc/sys/kernel/random/read_wakeup_threshold "64"
