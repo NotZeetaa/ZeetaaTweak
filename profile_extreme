@@ -149,6 +149,6 @@ write /proc/sys/kernel/random/write_wakeup_threshold "64"
 
 # Scheduler features
 write /sys/kernel/debug/sched_features "NEXT_BUDDY"
-write /sys/kernel/debug/sched_features "NO_TTWUQUEUE"
+write /sys/kernel/debug/sched_features "TTWUQUEUE"
 write /sys/kernel/debug/sched_features "NO_WAKEUP_PREEMPTION"
 write /sys/kernel/debug/sched_features "NO_GENTLE_FAIR_SLEEPERS"
