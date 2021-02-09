@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# ZeetaaTweak V0.2
+# ZeetaaTweak V0.3
 # Log path
 LOG_FILE="/data/data/com.zeetaa.zeetaatweaks/files/log/main_log"
 
