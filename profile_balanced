@@ -63,11 +63,6 @@ write /sys/module/workqueue/parameters/power_efficient "Y"
 # Adreno Idler
 write /sys/module/adreno_idler/paremeters/adreno_idler_active "N"
 
-# Cpu Input Boost
-write /sys/module/cpu_input_boost/parameters/input_boost_duration "1"
-write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost_duration "1"
-write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost "20"
-
 # Gpu Tweaks
 write /sys/class/kgsl/kgsl-3d0/throttling "1"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "4"
