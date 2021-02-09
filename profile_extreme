@@ -138,9 +138,7 @@ write /dev/stune/top-app/schedtune.boost "1"
 write /dev/stune/schedtune.boost "1"
 
 # Fs
-write /proc/sys/fs/dir-notify-enable "0"
 write /proc/sys/fs/lease-break-time "5"
-write /proc/sys/fs/aio-max-nr "131072"
 write /proc/sys/kernel/sched_migration_cost_ns "1000000"
 write /proc/sys/kernel/perf_cpu_time_max_percent "5"
 write /proc/sys/kernel/sched_min_task_util_for_colocation "0"
