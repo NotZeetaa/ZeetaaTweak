@@ -69,6 +69,7 @@ write /sys/class/kgsl/kgsl-3d0/force_clk_on "1"
 write /sys/class/kgsl/kgsl-3d0/force_bus_on "1"
 write /sys/class/kgsl/kgsl-3d0/force_rail_on "1"
 write /sys/class/kgsl/kgsl-3d0/pwrnap "0"
+write /sys/class/kgsl/kgsl-3d0/idle_timer "10000000"
 write /sys/class/kgsl/kgsl-3d0/force_no_nap "0"
 
 # Scheduler
