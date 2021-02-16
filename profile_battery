@@ -70,6 +70,7 @@ write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "5"
 write /sys/class/kgsl/kgsl-3d0/force_clk_on "0"
 write /sys/class/kgsl/kgsl-3d0/force_bus_on "0"
 write /sys/class/kgsl/kgsl-3d0/force_rail_on "0"
+write /sys/class/kgsl/kgsl-3d0/pwrnap "1"
 write /sys/class/kgsl/kgsl-3d0/force_no_nap "0"
 
 # Scheduler
