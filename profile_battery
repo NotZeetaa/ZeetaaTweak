@@ -137,6 +137,10 @@ write /sys/block/sdf/queue/iosched/quantum "4"
 write /sys/block/sdf/queue/iosched/group_idle "1"
 write /sys/block/sdf/queue/iosched/slice_idle "0"
 
+# Cpu Sets Tweak
+write /dev/cpuset/system-background/cpus "0-2"
+write /dev/cpuset/background/cpus "0-2"
+
 # Dev Stune Boost
 # Fast Sensivity in Game
 write /dev/stune/background/schedtune.boost "0"
