@@ -56,6 +56,14 @@ write /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us "200"
 write /sys/devices/system/cpu/cpu6/cpufreq/interactive/fast_ramp_down "0"
 write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us "200"
 write /sys/devices/system/cpu/cpu7/cpufreq/interactive/fast_ramp_down "0"
+write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu1/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu2/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu3/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu5/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_slack "4"
+write /sys/devices/system/cpu/cpu7/cpufreq/interactive/timer_slack "4"
 
 # Better Battery Efficient
 write /sys/module/workqueue/parameters/power_efficient "Y"
@@ -147,6 +155,19 @@ write /proc/sys/kernel/sched_wakeup_granularity_ns "5000000"
 write /proc/sys/kernel/sched_child_runs_first "0"
 write /proc/sys/kernel/timer_migration "1"
 write /proc/sys/kernel/sched_boost "0"
+
+# Lpm Levels
+Tweak
+write /sys/module/lpm_levels/L3/cpu0/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu1/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu2/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu3/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu4/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu5/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu6/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/cpu7/rail-pc/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/l3-wfi/idle_enabled "Y"
+write /sys/module/lpm_levels/L3/llcc-off "Y"
 
 # Network Improvements
 # Busy_poll & Busy_read its better in 50 than 0 ( Recommended by Red Hat )
