@@ -193,6 +193,11 @@ write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "N"
 write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled "N"
 write /sys/module/lpm_levels/parameters/sleep_disabled "Y"
 
+# Boost Control Tweak
+# Credits to @Ratoriku
+write /sys/module/boost_control/parameters/app_launch_boost_ms
+"3000"
+
 # Scheduler features
 write /sys/kernel/debug/sched_features "NEXT_BUDDY"
 write /sys/kernel/debug/sched_features "TTWUQUEUE"
