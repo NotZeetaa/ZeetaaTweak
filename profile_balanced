@@ -171,31 +171,17 @@ write /sys/module/lpm_levels/L3/llcc-off "Y"
 # Lpm Levels Tweak V2 
 # All Credits to Beast Mode ( @beast_project )
 write /sys/module/lpm_levels/system/pwr/cpu0/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/pwr/cpu1/ret/idle_enabled "Y"  
-
-write /sys/module/lpm_levels/system/pwr/cpu2/ret/idle_enabled "Y"      
-
-write /sys/module/lpm_levels/system/pwr/cpu3/ret/idle_enabled "Y"         
-
+write /sys/module/lpm_levels/system/pwr/cpu1/ret/idle_enabled "Y"
+write /sys/module/lpm_levels/system/pwr/cpu2/ret/idle_enabled "Y"
+write /sys/module/lpm_levels/system/pwr/cpu3/ret/idle_enabled "Y"
 write /sys/module/lpm_levels/system/perf/cpu4/ret/idle_enabled
-"Y"            
-
-write /sys/module/lpm_levels/system/perf/cpu5/ret/idle_enabled "Y"          
-
+"Y"
+write /sys/module/lpm_levels/system/perf/cpu5/ret/idle_enabled "Y"
 write /sys/module/lpm_levels/system/perf/cpu6/ret/idle_enabled "Y"
-            
-
 write /sys/module/lpm_levels/system/perf/cpu7/ret/idle_enabled "Y"
-            
-
 write /sys/module/lpm_levels/system/pwr/pwr-l2-dynret/idle_enabled "Y"
-            
-
 write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled "Y"
-            
-
-write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "Y"            
-
+write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "Y"
 write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled "Y"
 write /sys/module/lpm_levels/parameters/sleep_disabled "N"
 
