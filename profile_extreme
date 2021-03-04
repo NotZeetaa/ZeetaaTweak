@@ -121,6 +121,13 @@ write /sys/block/mmcblk1/queue/add_random "0"
 write /sys/block/mmcblk1/queue/rq_affinity "2"
 
 # Tweaked Cfq Recommended by Red hat
+# Edited by @NotZeetaa
+write /sys/block/sda/queue/iosched/low_latency "0"
+write /sys/block/sdb/queue/iosched/low_latency "0"
+write /sys/block/sdc/queue/iosched/low_latency "0"
+write /sys/block/sdd/queue/iosched/low_latency "0"
+write /sys/block/sde/queue/iosched/low_latency "0"
+write /sys/block/sdf/queue/iosched/low_latency "0"
 write /sys/block/sda/queue/iosched/quantum "64"
 write /sys/block/sda/queue/iosched/group_idle "1"
 write /sys/block/sda/queue/iosched/slice_idle "0"
