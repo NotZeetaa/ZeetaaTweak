@@ -198,11 +198,6 @@ write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "N"
 write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled "N"
 write /sys/module/lpm_levels/parameters/sleep_disabled "Y"
 
-# Network Improvements
-# Busy_poll & Busy_read its better in 50 than 0 ( Recommended by Red Hat )
-write /proc/sys/net/core/busy_poll "50"
-write /proc/sys/net/core/busy_read "50"
-
 # Scheduler features
 write /sys/kernel/debug/sched_features "NEXT_BUDDY"
 write /sys/kernel/debug/sched_features "TTWUQUEUE"

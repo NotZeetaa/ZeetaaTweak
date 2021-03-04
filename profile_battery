@@ -200,11 +200,6 @@ write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "Y"
 write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled "Y"
 write /sys/module/lpm_levels/parameters/sleep_disabled "N"
 
-# Network Improvements
-# Busy_poll & Busy_read its better in 50 than 0 ( Recommended by Red Hat )
-write /proc/sys/net/core/busy_poll "50"
-write /proc/sys/net/core/busy_read "50"
-
 # Entropy config
 write /proc/sys/kernel/random/read_wakeup_threshold "64"
 write /proc/sys/kernel/random/write_wakeup_threshold "64"
