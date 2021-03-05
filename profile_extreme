@@ -171,6 +171,7 @@ write /proc/sys/kernel/sched_child_runs_first "1"
 write /proc/sys/kernel/timer_migration "0"
 write /proc/sys/kernel/sched_boost "1"
 write /proc/sys/kernel/sched_schedstats "0"
+write /proc/sys/vm/dirty_ratio "40"
 
 # Lpm Levels Tweak
 write /sys/module/lpm_levels/L3/cpu0/rail-pc/idle_enabled "N"
