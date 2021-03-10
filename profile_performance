@@ -73,10 +73,6 @@ write /sys/module/adreno_idler/paremeters/adreno_idler_active "N"
 # Gpu Tweaks
 write /sys/class/kgsl/kgsl-3d0/throttling "0"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "2"
-write /sys/class/kgsl/kgsl-3d0/force_clk_on "1"
-write /sys/class/kgsl/kgsl-3d0/force_bus_on "1"
-write /sys/class/kgsl/kgsl-3d0/force_rail_on "1"
-write /sys/class/kgsl/kgsl-3d0/force_no_nap "0"
 
 # Scheduler
 write /sys/block/sda/queue/scheduler "cfq"
