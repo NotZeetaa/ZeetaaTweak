@@ -208,10 +208,6 @@ write /sys/module/lpm_levels/parameters/sleep_disabled "N"
 write /sys/module/boost_control/parameters/app_launch_boost_ms
 "0"
 
-# Entropy config
-write /proc/sys/kernel/random/read_wakeup_threshold "64"
-write /proc/sys/kernel/random/write_wakeup_threshold "64"
-
 # Scheduler features
 write /sys/kernel/debug/sched_features "NO_NEXT_BUDDY"
 write /sys/kernel/debug/sched_features "NO_TTWUQUEUE"

@@ -200,10 +200,6 @@ write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "N"
 write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled "N"
 write /sys/module/lpm_levels/parameters/sleep_disabled "Y"
 
-# Entropy config
-write /proc/sys/kernel/random/read_wakeup_threshold "128"
-write /proc/sys/kernel/random/write_wakeup_threshold "128"
-
 # Boost Control Tweak
 # Credits to @Ratoriku
 write /sys/module/boost_control/parameters/app_launch_boost_ms
