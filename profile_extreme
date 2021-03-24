@@ -170,6 +170,7 @@ write /proc/sys/kernel/sched_boost_top_app "1"
 write /proc/sys/kernel/sched_walt_rotate_big_tasks "1"
 write /proc/sys/kernel/timer_migration "0"
 write /proc/sys/kernel/sched_boost "1"
+write /proc/sys/kernel/sched_nr_migrate "128"
 write /proc/sys/kernel/sched_schedstats "0"
 write /proc/sys/vm/dirty_ratio "40"
 
