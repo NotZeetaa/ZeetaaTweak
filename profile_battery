@@ -211,6 +211,4 @@ write /sys/kernel/debug/sched_features "NO_NEXT_BUDDY"
 write /sys/kernel/debug/sched_features "NO_TTWU_QUEUE"
 write /sys/kernel/debug/sched_features "WAKEUP_PREEMPTION"
 write /sys/kernel/debug/sched_features "GENTLE_FAIR_SLEEPERS"
-
-
-
+write /sys/kernel/debug/sched_features "NO_STUNE_BOOST_BIAS_BIG"
