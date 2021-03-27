@@ -167,7 +167,6 @@ write /proc/sys/kernel/sched_boost "0"
 write /proc/sys/kernel/sched_nr_migrate "2"
 write /proc/sys/kernel/sched_schedstats "0"
 write /proc/sys/net/ipv4/tcp_fastopen 3
-write /proc/sys/vm/dirty_ratio "20"
 write /proc/sys/vm/page-cluster 0
 write /proc/sys/net/ipv4/tcp_timestamps "1"
 
