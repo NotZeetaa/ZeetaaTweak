@@ -204,6 +204,6 @@ write /sys/module/boost_control/parameters/app_launch_boost_ms
 
 # Scheduler features
 write /sys/kernel/debug/sched_features "NEXT_BUDDY"
-write /sys/kernel/debug/sched_features "TTWUQUEUE"
+write /sys/kernel/debug/sched_features "TTWU_QUEUE"
 write /sys/kernel/debug/sched_features "NO_WAKEUP_PREEMPTION"
 write /sys/kernel/debug/sched_features "NO_GENTLE_FAIR_SLEEPERS"
