@@ -171,36 +171,6 @@ write /proc/sys/net/ipv4/tcp_fastopen 3
 write /proc/sys/vm/page-cluster 0
 write /proc/sys/net/ipv4/tcp_timestamps "1"
 
-# Lpm Levels
-Tweak
-write /sys/module/lpm_levels/L3/cpu0/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu1/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu2/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu3/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu4/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu5/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu6/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/cpu7/rail-pc/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/l3-wfi/idle_enabled "Y"
-write /sys/module/lpm_levels/L3/llcc-off "Y"
-
-# Lpm Levels Tweak V2 
-# All Credits to Beast Mode ( @beast_project )
-write /sys/module/lpm_levels/system/pwr/cpu0/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/pwr/cpu1/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/pwr/cpu2/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/pwr/cpu3/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/perf/cpu4/ret/idle_enabled
-"Y"
-write /sys/module/lpm_levels/system/perf/cpu5/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/perf/cpu6/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/perf/cpu7/ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/pwr/pwr-l2-dynret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/pwr/pwr-l2-ret/idle_enabled "Y"
-write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled "Y"
-write /sys/module/lpm_levels/parameters/sleep_disabled "N"
-
 # Boost Control Tweak
 # Credits to @Ratoriku
 write /sys/module/boost_control/parameters/app_launch_boost_ms
