@@ -65,7 +65,7 @@ write /sys/devices/system/cpu/cpu5/cpufreq/interactive/timer_slack "4"
 write /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_slack "4"
 write /sys/devices/system/cpu/cpu7/cpufreq/interactive/timer_slack "4"
 
-# Better Battery Efficient
+# Power Efficient tweak
 write /sys/module/workqueue/parameters/power_efficient "N"
 
 # Adreno Idler
