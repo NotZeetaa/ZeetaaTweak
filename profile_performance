@@ -65,7 +65,7 @@ write /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_slack "-1"
 write /sys/devices/system/cpu/cpu7/cpufreq/interactive/timer_slack "-1"
 
 # Better Battery Efficient
-write /sys/module/workqueue/parameters/power_efficient "N"
+write /sys/module/workqueue/parameters/power_efficient "Y"
 
 # Adreno Idler
 write /sys/module/adreno_idler/paremeters/adreno_idler_active "N"
