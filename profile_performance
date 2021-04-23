@@ -79,10 +79,10 @@ write /sys/class/kgsl/kgsl-3d0/bus_split "0"
 
 for sched in /sys/block/*/queue
 do
-    write "sched/scheduler" "cfq"
-    write "sched/rq_affinity" "2"
-    write "sched/iostats" "0"
-    write "sched/read_ahead_kb" "128"
+    write "$sched/scheduler" "cfq"
+    write "$sched/rq_affinity" "2"
+    write "$sched/iostats" "0"
+    write "$sched/read_ahead_kb" "128"
 done
 
 # Tweaked Cfq Recommended by Red hat
