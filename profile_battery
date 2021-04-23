@@ -91,9 +91,8 @@ done
 # Edited by @NotZeetaa
 
 for iosched in /sys/block/*/queue/iosched
-
 do
-    write "$iosched/low_latency "1"
+    write "$iosched/low_latency" "1"
     write "$iosched/quantum" "4"
     write "$iosched/slide_idle" "0"
     write "$iosched/group_idle" "1"

@@ -89,12 +89,11 @@ done
 # Edited by @NotZeetaa
 
 for iosched in /sys/block/*/queue/iosched
-
-do
-    write "$iosched/low_latency "0"
-    write "$iosched/quantum" "64"
-    write "$iosched/slide_idle" "0"
-    write "$iosched/group_idle" "1"
+do
+    write "$iosched/low_latency" "0"
+    write "$iosched/quantum" "64"
+    write "$iosched/slide_idle" "0"
+    write "$iosched/group_idle" "1"
 done
 
 # Cpu Sets Tweak
