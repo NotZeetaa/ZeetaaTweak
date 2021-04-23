@@ -87,27 +87,15 @@ done
 
 # Tweaked Cfq Recommended by Red hat
 # Edited by @NotZeetaa
-write /sys/block/sda/queue/iosched/low_latency "0"
-write /sys/block/sdb/queue/iosched/low_latency "0"
-write /sys/block/sdc/queue/iosched/low_latency "0"
-write /sys/block/sdd/queue/iosched/low_latency "0"
-write /sys/block/sde/queue/iosched/low_latency "0"
-write /sys/block/sdf/queue/iosched/low_latency "0"
-write /sys/block/sda/queue/iosched/quantum "64"
-write /sys/block/sda/queue/iosched/group_idle "1"
-write /sys/block/sda/queue/iosched/slice_idle "0"
-write /sys/block/sdb/queue/iosched/quantum "64"
-write /sys/block/sdb/queue/iosched/group_idle "1"
-write /sys/block/sdb/queue/iosched/slice_idle "0"
-write /sys/block/sdc/queue/iosched/quantum "64"
-write /sys/block/sdc/queue/iosched/group_idle "1"
-write /sys/block/sdc/queue/iosched/slice_idle "0"
-write /sys/block/sde/queue/iosched/quantum "64"
-write /sys/block/sde/queue/iosched/group_idle "1"
-write /sys/block/sde/queue/iosched/slice_idle "0"
-write /sys/block/sdf/queue/iosched/quantum "64"
-write /sys/block/sdf/queue/iosched/group_idle "1"
-write /sys/block/sdf/queue/iosched/slice_idle "0"
+
+for iosched in /sys/block/*/queue/iosched
+
+do
+    write "$iosched/low_latency "0"
+    write "$iosched/quantum" "64"
+    write "$iosched/slide_idle" "0"
+    write "$iosched/group_idle" "1"
+done
 
 # Cpu Sets Tweak
 write /dev/cpuset/camera-daemon/cpus "0-7"
