@@ -23,7 +23,7 @@ write() {
   if [ "$currentValue" -eq "$2" ]; then
     sendToLog "$2 -✅-> $1"
   else
-    sendToLog "$2 -❌-> $1"
+    sendToLog "$2 -⚠️-> $1"
   fi
 
   unset currentValue
