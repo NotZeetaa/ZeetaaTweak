@@ -66,6 +66,11 @@ write /sys/devices/system/cpu/cpu5/cpufreq/interactive/timer_slack "8"
 write /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_slack "8"
 write /sys/devices/system/cpu/cpu7/cpufreq/interactive/timer_slack "8"
 
+for pro in /sys/devices/system/cpu/cpu*/cpufreq/interactive_pro/
+do
+    write "$pro/timer_slack" "8000"
+done
+
 # Power Efficient tweak
 write /sys/module/workqueue/parameters/power_efficient "N"
 
