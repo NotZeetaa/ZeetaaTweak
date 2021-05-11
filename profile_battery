@@ -147,7 +147,7 @@ write /proc/sys/kernel/sched_schedstats "0"
 write /proc/sys/net/ipv4/tcp_fastopen "3"
 write /proc/sys/vm/page-cluster "0"
 write /proc/sys/net/ipv4/tcp_timestamps "1"
-write /proc/sys/kernel/sched_rt_period_us "1800000"
+write /proc/sys/kernel/sched_rt_period_us "1300000"
 
 # Boost Control Tweak
 # Credits to @Ratoriku
