@@ -103,14 +103,6 @@ do
     write "$iosched/group_idle" "1"
 done
 
-# Cpu Sets Tweak
-write /dev/cpuset/camera-daemon/cpus "0-7"
-write /dev/cpuset/restricted/cpus "0-7"
-write /dev/cpuset/foreground/cpus "0-2,4-7"
-write /dev/cpuset/top-app/cpus "0-7"
-write /dev/cpuset/system-background/cpus "0-2"
-write /dev/cpuset/background/cpus "0-2"
-
 # Dev Stune Boost
 # Fast Sensivity in Game
 write /dev/stune/background/schedtune.boost "0"
