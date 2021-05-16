@@ -71,12 +71,6 @@ do
     write "$pro/timer_slack" "8000"
 done
 
-# Power Efficient tweak
-write /sys/module/workqueue/parameters/power_efficient "N"
-
-# Adreno Idler
-write /sys/module/adreno_idler/paremeters/adreno_idler_active "Y"
-
 # Gpu Tweaks
 write /sys/class/kgsl/kgsl-3d0/throttling "1"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "5"
@@ -90,17 +84,6 @@ do
     write "$sched/rq_affinity" "0"
     write "$sched/iostats" "0"
     write "$sched/read_ahead_kb" "64"
-done
-
-# Tweaked Cfq Recommended by Red hat
-# Edited by @NotZeetaa
-
-for iosched in /sys/block/*/queue/iosched
-do
-    write "$iosched/low_latency" "1"
-    write "$iosched/quantum" "4"
-    write "$iosched/slide_idle" "1"
-    write "$iosched/group_idle" "1"
 done
 
 # Dev Stune Boost
@@ -118,28 +101,17 @@ write /dev/stune/foreground/schedtune.prefer_idle "1"
 write /dev/stune/rt/schedtune.prefer_idle "1"
 write /dev/stune/schedtune.prefer_idle "1"
 
-
 # Fs
 write /proc/sys/fs/lease-break-time "80"
 write /proc/sys/fs/dir-notify-enable "1"
-write /proc/sys/kernel/sched_migration_cost_ns "300000"
 write /proc/sys/kernel/perf_cpu_time_max_percent "95"
 write /proc/sys/kernel/sched_min_task_util_for_colocation "1000"
 write /proc/sys/kernel/sched_min_task_util_for_boost "1000"
-write /proc/sys/kernel/sched_min_granularity_ns "1500000"
-write /proc/sys/kernel/sched_wakeup_granularity_ns "1500000"
-write /proc/sys/kernel/sched_rt_runtime_us "300000"
 write /proc/sys/kernel/sched_child_runs_first "0"
 write /proc/sys/kernel/timer_migration "1"
 write /proc/sys/kernel/sched_boost_top_app "0"
 write /proc/sys/kernel/sched_walt_rotate_big_tasks "0"
 write /proc/sys/kernel/sched_boost "0"
-write /proc/sys/kernel/sched_nr_migrate "256"
-write /proc/sys/kernel/sched_schedstats "0"
-write /proc/sys/net/ipv4/tcp_fastopen "3"
-write /proc/sys/vm/page-cluster "0"
-write /proc/sys/net/ipv4/tcp_timestamps "1"
-write /proc/sys/kernel/sched_rt_period_us "1300000"
 
 # Boost Control Tweak
 # Credits to @Ratoriku

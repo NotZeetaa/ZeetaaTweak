@@ -70,12 +70,6 @@ do
     write "$pro/timer_slack" "4000"
 done
 
-# Power Efficient tweak
-write /sys/module/workqueue/parameters/power_efficient "N"
-
-# Adreno Idler
-write /sys/module/adreno_idler/paremeters/adreno_idler_active "N"
-
 # Gpu Tweaks
 write /sys/class/kgsl/kgsl-3d0/throttling "1"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "4"
@@ -95,14 +89,6 @@ done
 # Edited by @NotZeetaa
 
 
-for iosched in /sys/block/*/queue/iosched
-do
-    write "$iosched/low_latency" "1"
-    write "$iosched/quantum" "8"
-    write "$iosched/slide_idle" "0"
-    write "$iosched/group_idle" "1"
-done
-
 # Dev Stune Boost
 # Fast Sensivity in Game
 write /dev/stune/background/schedtune.boost "0"
@@ -121,24 +107,15 @@ write /dev/stune/schedtune.prefer_idle "1"
 # Fs
 write /proc/sys/fs/lease-break-time "15"
 write /proc/sys/fs/dir-notify-enable "1"
-write /proc/sys/kernel/sched_migration_cost_ns "600000"
 write /proc/sys/kernel/perf_cpu_time_max_percent "25"
 write /proc/sys/kernel/sched_min_task_util_for_colocation "100"
 write /proc/sys/kernel/sched_min_task_util_for_boost "100"
-write /proc/sys/kernel/sched_min_granularity_ns "7000000"
-write /proc/sys/kernel/sched_wakeup_granularity_ns "5000000"
-write /proc/sys/kernel/sched_rt_runtime_us "850000"
 write /proc/sys/kernel/sched_child_runs_first "0"
 write /proc/sys/kernel/sched_boost_top_app "0"
 write /proc/sys/kernel/sched_walt_rotate_big_tasks "0"
 write /proc/sys/kernel/timer_migration "1"
 write /proc/sys/kernel/sched_boost "0"
 write /proc/sys/kernel/sched_nr_migrate "64"
-write /proc/sys/kernel/sched_schedstats "0"
-write /proc/sys/net/ipv4/tcp_fastopen "3"
-write /proc/sys/vm/page-cluster "0"
-write /proc/sys/net/ipv4/tcp_timestamps "1"
-write /proc/sys/kernel/sched_rt_period_us "1200000"
 
 # Boost Control Tweak
 # Credits to @Ratoriku
