@@ -85,10 +85,6 @@ do
     write "$sched/read_ahead_kb" "128"
 done
 
-# Tweaked Cfq Recommended by Red hat
-# Edited by @NotZeetaa
-
-
 # Dev Stune Boost
 # Fast Sensivity in Game
 write /dev/stune/background/schedtune.boost "0"
