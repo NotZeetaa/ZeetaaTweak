@@ -119,6 +119,6 @@ for boost in /sys/devices/system/*/cpu_boost
 do
     write "$boost/sched_boost_on_input" "1"
     write "$boost/sched_boost_on_powerkey_input" "1"
-    write "$boost/input_boost_ms" "170"
+    write "$boost/input_boost_ms" "2000"
     write "$boost/powerkey_input_boost_ms" "500"
 done
