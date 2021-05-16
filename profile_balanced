@@ -90,7 +90,6 @@ write /proc/sys/kernel/sched_boost_top_app "0"
 write /proc/sys/kernel/sched_walt_rotate_big_tasks "0"
 write /proc/sys/kernel/timer_migration "1"
 write /proc/sys/kernel/sched_boost "0"
-write /proc/sys/kernel/sched_nr_migrate "64"
 
 # Boost Control Tweak
 # Credits to @Ratoriku
