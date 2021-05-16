@@ -64,6 +64,12 @@ do
     write "$sched/read_ahead_kb" "128"
 done
 
+for iosched in /sys/block/*/queue/iosched
+do
+    write "$iosched/slide_idle" "0"
+    write "$iosched/group_idle" "1"
+done
+
 # Dev Stune Boost
 # Fast Sensivity in Game
 write /dev/stune/background/schedtune.boost "0"
