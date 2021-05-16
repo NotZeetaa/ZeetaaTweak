@@ -154,8 +154,6 @@ write /sys/kernel/debug/sched_features "GENTLE_FAIR_SLEEPERS"
 write /sys/kernel/debug/sched_features "NO_STUNE_BOOST_BIAS_BIG"
 write /sys/kernel/debug/sched_features "NO_CACHE_HOT_BUDDY"
 write /sys/kernel/debug/sched_features "NO_LAST_BUDDY"
-write /sys/kernel/debug/sched_features "NO_SCHEDTUNE_BOOST_HOLD_ALL"
-write /sys/kernel/debug/sched_features "NO_SUGOV_RT_MAX_FREQ"
 
 for cpu in /sys/devices/system/cpu/*/sched_load_boost
 do
