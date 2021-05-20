@@ -79,11 +79,11 @@ write /dev/stune/top-app/schedtune.boost "0"
 write /dev/stune/schedtune.boost "0"
 write /dev/stune/nnapi-hal/schedtune.boost "0"
 write /dev/stune/nnapi-hal/schedtune.prefer_idle "1"
-write /dev/stune/top-app/schedtune.prefer_idle "1"
+write /dev/stune/top-app/schedtune.prefer_idle "0"
 write /dev/stune/background/schedtune.prefer_idle "1"
 write /dev/stune/foreground/schedtune.prefer_idle "1"
 write /dev/stune/rt/schedtune.prefer_idle "1"
-write /dev/stune/schedtune.prefer_idle "1"
+write /dev/stune/schedtune.prefer_idle "0"
 
 # Fs
 write /proc/sys/fs/lease-break-time "15"
