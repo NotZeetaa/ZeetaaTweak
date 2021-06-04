@@ -35,7 +35,7 @@ write() {
 for sch in /sys/devices/system/cpu/cpu*/cpufreq/schedutil/
 do
     write "$sch/down_rate_limit_us" "0"
-    write "$sch/up_rate_limit_us" "2000"
+    write "$sch/up_rate_limit_us" "0"
     write "$sch/iowait_boost_enable" "0"
 done
 
