@@ -53,6 +53,7 @@ done
 write /sys/class/kgsl/kgsl-3d0/throttling "1"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "4"
 write /sys/class/kgsl/kgsl-3d0/bus_split "1"
+write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost "1"
 
 # Scheduler tweak
 
