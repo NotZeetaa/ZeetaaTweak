@@ -93,6 +93,7 @@ write /proc/sys/kernel/sched_child_runs_first "0"
 write /proc/sys/kernel/sched_boost_top_app "1"
 write /proc/sys/kernel/sched_walt_rotate_big_tasks "1"
 write /proc/sys/kernel/sched_boost "1"
+write /proc/sys/kernel/sched_cfs_boost "1"
 
 # Boost Control Tweak
 # Credits to @Ratoriku
