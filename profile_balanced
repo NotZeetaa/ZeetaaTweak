@@ -95,9 +95,6 @@ write /proc/sys/kernel/sched_boost_top_app "0"
 write /proc/sys/kernel/sched_walt_rotate_big_tasks "0"
 write /proc/sys/kernel/sched_boost "0"
 
-# UTW (UFS Turbo Write Tweak)
-write /sys/devices/platform/soc/1d84000.ufshc/ufstw_lu0/tw_enable "0"
-
 # Boost Control Tweak
 # Credits to @Ratoriku
 write /sys/module/boost_control/parameters/app_launch_boost_ms
