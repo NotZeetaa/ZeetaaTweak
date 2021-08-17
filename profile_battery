@@ -72,7 +72,6 @@ do
 done
 
 # Dev Stune Boost
-# Fast Sensivity in Game
 write /dev/stune/background/schedtune.boost "0"
 write /dev/stune/foreground/schedtune.boost "0"
 write /dev/stune/rt/schedtune.boost "0"
