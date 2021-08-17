@@ -112,6 +112,10 @@ do
     write "$cboost/wake_boost_duration" "0"
 done
 
+# TouchBoost
+
+write /sys/module/msm_performance/parameters/touchboost "0"
+
 # Scheduler features
 write /sys/kernel/debug/sched_features "NO_NEXT_BUDDY"
 
