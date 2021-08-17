@@ -104,6 +104,14 @@ write /sys/devices/platform/soc/1d84000.ufshc/ufstw_lu0/tw_enable "0"
 write /sys/module/boost_control/parameters/app_launch_boost_ms
 "0"
 
+# Cpu_Input_Boost
+for cboost in /sys/module/cpu_input_boost/parameters
+do
+    write "$cboost/dynamic_stune_boost" "N"
+    write "$cboost/dynamic_stune_boost" "N"
+    write "$cboost/wake_boost_duration" "0"
+done
+
 # Scheduler features
 write /sys/kernel/debug/sched_features "NO_NEXT_BUDDY"
 
