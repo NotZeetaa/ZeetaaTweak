@@ -53,6 +53,10 @@ write /sys/class/kgsl/kgsl-3d0/throttling "1"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "4"
 write /sys/class/kgsl/kgsl-3d0/bus_split "1"
 write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost "1"
+write /sys/class/kgsl/kgsl-3d0/force_clk_on "0"
+write /sys/class/kgsl/kgsl-3d0/force_bus_on "0"
+write /sys/class/kgsl/kgsl-3d0/force_rail_on "0"
+write /sys/class/kgsl/kgsl-3d0/force_no_nap "0"
 
 # Scheduler tweak
 for sched in /sys/block/*/queue
