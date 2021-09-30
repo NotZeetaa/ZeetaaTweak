@@ -113,8 +113,9 @@ do
     write "$cboost/wake_boost_duration" "200"
 done
 
-# TouchBoost
+# Disable TouchBoost
 write /sys/module/msm_performance/parameters/touchboost "0"
+write /sys/power/pnpmgr/touch_boost "0"
 
 # Scheduler features
 write /sys/kernel/debug/sched_features "NO_NEXT_BUDDY"
