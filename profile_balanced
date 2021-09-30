@@ -87,6 +87,10 @@ write /dev/stune/foreground/schedtune.prefer_idle "1"
 write /dev/stune/rt/schedtune.prefer_idle "1"
 write /dev/stune/schedtune.prefer_idle "0"
 
+#Vm
+write /proc/sys/vm/vfs_cache_pressure "60"
+write /proc/sys/vm/swappiness "80"
+
 # Fs
 write /proc/sys/fs/lease-break-time "15"
 write /proc/sys/kernel/perf_cpu_time_max_percent "25"
