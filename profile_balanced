@@ -49,6 +49,7 @@ do
 done
 
 # Gpu Tweaks
+write /sys/class/kgsl/kgsl-3d0/devfreq/polling_interval "8"
 write /sys/class/kgsl/kgsl-3d0/throttling "1"
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel "4"
 write /sys/class/kgsl/kgsl-3d0/bus_split "1"
