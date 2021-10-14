@@ -88,9 +88,19 @@ write /dev/stune/foreground/schedtune.prefer_idle "1"
 write /dev/stune/rt/schedtune.prefer_idle "1"
 write /dev/stune/schedtune.prefer_idle "0"
 
-#Vm
+# Vm
 write /proc/sys/vm/vfs_cache_pressure "60"
 write /proc/sys/vm/swappiness "80"
+write /proc/sys/vm/stat_interval "10"
+
+# Disable low memory killer debugging
+write /sys/module/lowmemorykiller/parameters/debug_level "0"
+
+# Disable scheduler statistics collection
+write /proc/sys/kernel/sched_schedstats "0"
+
+# Disable unnecessary printk logging
+write /proc/sys/kernel/printk_devkmsg "off"
 
 # Fs
 write /proc/sys/fs/lease-break-time "25"
